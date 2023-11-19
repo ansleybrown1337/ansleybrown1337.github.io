@@ -1,8 +1,8 @@
-# AJ's Data Tools
+# Introduction
 A website created to easily direct users to my data tools and projects. To view a project, click on the project title, and it will direct you to the project's GitHub repository.
 
 
-If you see any that interest you, feel free to reach out to me at [Ansley.Brown@colostate.edu](mailto:Ansley.Brown@colostate.edu).
+If you see any that interest you, feel free to reach out to me at [Ansley.Brown@colostate.edu](mailto:Ansley.Brown@colostate.edu) or [ansleybrown1337@gmail.com](mailto:ansleybrown1337@gmail.com).
 
 # Table of Contents
 - [My projects](#my-projects)
@@ -17,7 +17,7 @@ If you see any that interest you, feel free to reach out to me at [Ansley.Brown@
 - **[ansleybrown1337](https://github.com/ansleybrown1337/ansleybrown1337)**
   - Config files for my GitHub profile.
 - **[ansleybrown1337.github.io](https://github.com/ansleybrown1337/ansleybrown1337.github.io)**
-  - A website to host AJ's most notable data tools.
+  - The repository for this website.
 - **[AWQP-Water-Analysis-Report](https://github.com/ansleybrown1337/AWQP-Water-Analysis-Report)**
   - Python tool to generate standard water quality reports with preliminary analytics and tools
 - **[Corn-yield-salinity-response](https://github.com/ansleybrown1337/Corn-yield-salinity-response)**
@@ -30,16 +30,12 @@ If you see any that interest you, feel free to reach out to me at [Ansley.Brown@
   - Python script for monte carlo analysis using the ExtractChem geochemical model.
 - **[Hydrus-1D-Python-Wrapper](https://github.com/ansleybrown1337/Hydrus-1D-Python-Wrapper)**
   - This repository is dedicated to the ongoing project of using python to run Monte Carlo analysis on the soil physical and chemical model, Hydrus 1D
-- **[imodels](https://github.com/ansleybrown1337/imodels)**
-  - Interpretable ML package 🔍 for concise, transparent, and accurate predictive modeling (sklearn-compatible).
+
 - **[Intro-to-coding-in-R](https://github.com/ansleybrown1337/Intro-to-coding-in-R)**
   - Short crashcourse to get started with coding in R using R studio as an IDE and sample water quality data.
 - **[Irrigation-inflow-outflow-calculator](https://github.com/ansleybrown1337/Irrigation-inflow-outflow-calculator)**
   - R script designed to take bucket fill time readings and flume measurements in surface irrigation systems to calculate water inflow/outflow quantities in volume and depth
-- **[Letterboxd_Caz](https://github.com/ansleybrown1337/Letterboxd_Caz)**
-  - Letterboxd stats for logged movies
-- **[nimble-csu-2023](https://github.com/ansleybrown1337/nimble-csu-2023)**
-  - Materials for the NIMBLE short course at the enviBayes workshop at Colorado State University, September 18, 2023
+
 - **[optimal-path-using-dijkstras-algorithm](https://github.com/ansleybrown1337/optimal-path-using-dijkstras-algorithm)**
   - This python project is the result of a class assignment for Colorado State University course WR 514: GIS and Data Analysis in Water Resources. Below is the example problem:
 - **[Particle-Electron-Modbus-Master-for-Campbell-Sci-Datalogger](https://github.com/ansleybrown1337/Particle-Electron-Modbus-Master-for-Campbell-Sci-Datalogger)**
