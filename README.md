@@ -12,8 +12,6 @@ If you see any that interest you, feel free to reach out to me at [Ansley.Brown@
 # My projects
 - **[air-quality-kit](https://github.com/ansleybrown1337/air-quality-kit)**
   - Source for the Particle Air Quality Monitoring Kit
-- **[ALS-Data-Cleaning-Tool](https://github.com/ansleybrown1337/ALS-Data-Cleaning-Tool)**
-  - R code to take ALS excel water quality data and interpret it via some preliminary graphics
 - **[ansleybrown1337](https://github.com/ansleybrown1337/ansleybrown1337)**
   - Config files for my GitHub profile.
 - **[ansleybrown1337.github.io](https://github.com/ansleybrown1337/ansleybrown1337.github.io)**
@@ -57,3 +55,5 @@ If you see any that interest you, feel free to reach out to me at [Ansley.Brown@
 in mountain meadow hay fields found in Colorado, USA.
 - **[ALS-Data-Cleaning-Tool](https://github.com/CSU-Agricultural-Water-Quality-Program/ALS-Data-Cleaning-Tool)**      
   - A coding tool developed in R to take water analysis results exported from the ALS WEBTRIEVE™ data portal. Exported data are cleaned, merged, and exported into archiving (e.g., CSV) or visual (e.g., HTML) formats.
+- **[low-cost-iot-water-sampler](https://github.com/CSU-Agricultural-Water-Quality-Program/low-cost-iot-water-sampler)**
+  - A low-cost, automated water sampler (LCS) with Internet of Things (IoT) technology for scalable, near-real-time water quality research developed by the Colorado State University Agricultural Water Quality Program
