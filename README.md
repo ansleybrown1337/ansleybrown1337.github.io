@@ -18,6 +18,8 @@ If you see any that interest you, feel free to reach out to me at [Ansley.Brown@
   - The repository for this website.
 - **[AWQP-Water-Analysis-Report](https://github.com/ansleybrown1337/AWQP-Water-Analysis-Report)**
   - Python tool to generate standard water quality reports with preliminary analytics and tools
+- **[bayes-tss-uncertainty](https://github.com/ansleybrown1337/bayes-tss-uncertainty)**
+  - This project aims to apply Bayesian Inference and Markov Chain Monte Carlo (MCMC) methods to quantify uncertainty in Total Suspended Solids (TSS) measurements.
 - **[Corn-yield-salinity-response](https://github.com/ansleybrown1337/Corn-yield-salinity-response)**
   - Tool used to calibrate and compare salinity tolerance index functions, using a real corn dataset as an example.
 - **[csuthesis](https://github.com/ansleybrown1337/csuthesis)**
