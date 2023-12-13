@@ -8,11 +8,6 @@ repository information.
 
 Author: Ansley Brown
 GitHub API Documentation: https://docs.github.com/en/rest?apiVersion=2022-11-28
-
-Usage:
-1. Call get_user_repos() with a GitHub username to get repositories of that user.
-2. Call get_organization_repos() with a GitHub organization name to get repositories of that organization.
-3. The output will be printed in Markdown format, suitable for use in documentation or GitHub README files.
 """
 
 import requests
@@ -34,9 +29,6 @@ def get_user_repos(username):
         print("Failed to retrieve repositories")
         return None
 
-my_list = get_user_repos("ansleybrown1337")
-print(my_list)
-
 def get_organization_repos(org_name):
     url = f"https://api.github.com/orgs/{org_name}/repos"
     response = requests.get(url)
@@ -54,5 +46,35 @@ def get_organization_repos(org_name):
         print("Failed to retrieve repositories")
         return None
 
-awqp_list = get_organization_repos("CSU-Agricultural-Water-Quality-Program")
-print(awqp_list)
+def create_readme():
+    user_repo_section = get_user_repos("ansleybrown1337")
+    org_repo_section = get_organization_repos("CSU-Agricultural-Water-Quality-Program")
+
+    readme_content = f"""
+# Introduction
+A website created to easily direct users to my data tools and projects. To view a project, click on the project title, and it will direct you to the project's GitHub repository.
+
+If you see any that interest you, feel free to reach out to me at [Ansley.Brown@colostate.edu](mailto:Ansley.Brown@colostate.edu) or [ansleybrown1337@gmail.com](mailto:ansleybrown1337@gmail.com).
+
+# Table of Contents
+- [My projects](#my-projects)
+- [Projects I've done for Others](#projects-ive-done-for-others)
+  - [CSU Agriculture Water Quality Program](#csu-agriculture-water-quality-program)
+
+# My projects
+{user_repo_section}
+
+# Projects I've done for Others
+
+## CSU Agriculture Water Quality Program
+- [AWQP GitHub Page](https://github.com/CSU-Agricultural-Water-Quality-Program)
+- [AWQP Website](https://waterquality.colostate.edu/)
+
+### Projects
+{org_repo_section}
+    """
+
+    with open('README.md', 'w', encoding='utf-8') as readme_file:
+        readme_file.write(readme_content)
+
+create_readme()
