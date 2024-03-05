@@ -1,8 +1,13 @@
 
 # Introduction
-A website created to easily direct users to my data tools and projects. To view a project, click on the project title, and it will direct you to the project's GitHub repository.
+A website created to easily direct visitors to my data tools and projects. To view a project, click on the project title, and it will direct you to the project's GitHub repository. 
 
 If you see any that interest you, feel free to reach out to me at [Ansley.Brown@colostate.edu](mailto:Ansley.Brown@colostate.edu) or [ansleybrown1337@gmail.com](mailto:ansleybrown1337@gmail.com).
+
+Back to [AJ's Website](https://sites.google.com/view/ansleyjbrown).
+
+> !NOTE 
+> This project list is automatically generated from a python script I created to scrape my GitHub repositories. Feel free to use it for yourself, as it is open source and available within this repository as well.
 
 # Table of Contents
 - [My projects](#my-projects)
@@ -20,6 +25,8 @@ If you see any that interest you, feel free to reach out to me at [Ansley.Brown@
   - A website to host AJ's most notable data tools.
 - **[AWQP-Water-Analysis-Report](https://github.com/ansleybrown1337/AWQP-Water-Analysis-Report)**
   - Python tool to generate standard water quality reports with preliminary analytics and tools
+- **[bayes-sampler-comparison](https://github.com/ansleybrown1337/bayes-sampler-comparison)**
+  - A comparison investigation of water sampling methods as tested by the CSU AWQP on the Kerbel field in 2023. 
 - **[bayes-tss-uncertainty](https://github.com/ansleybrown1337/bayes-tss-uncertainty)**
   - This project aims to apply Bayesian Inference and Markov Chain Monte Carlo (MCMC) methods to quantify uncertainty in Total Suspended Solids (TSS) measurements.
 - **[Corn-yield-salinity-response](https://github.com/ansleybrown1337/Corn-yield-salinity-response)**
@@ -77,5 +84,7 @@ If you see any that interest you, feel free to reach out to me at [Ansley.Brown@
   - A coding tool developed in R to take water analysis results exported from the ALS WEBTRIEVE™ data portal. Exported data are cleaned, merged, and exported into archiving (e.g., CSV) or visual (e.g., HTML) formats.
 - **[low-cost-iot-water-sampler](https://github.com/CSU-Agricultural-Water-Quality-Program/low-cost-iot-water-sampler)**
   - A low-cost, automated water sampler (LCS) with Internet of Things (IoT) technology for scalable, near-real-time water quality research developed by the Colorado State University Agricultural Water Quality Program
+- **[.github](https://github.com/CSU-Agricultural-Water-Quality-Program/.github)**
+  - Welcome to the Colorado State University Agricultural Water Quality Program GitHub!
 
     
