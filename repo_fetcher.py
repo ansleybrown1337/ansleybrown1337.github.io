@@ -56,6 +56,9 @@ A website created to easily direct users to my data tools and projects. To view 
 
 If you see any that interest you, feel free to reach out to me at [Ansley.Brown@colostate.edu](mailto:Ansley.Brown@colostate.edu) or [ansleybrown1337@gmail.com](mailto:ansleybrown1337@gmail.com).
 
+> [!TIP]
+> The contents of this website are automatically generated from a python script I created. The script uses the GitHub API to pull all of my repositories and then formats them into a markdown file. The markdown file is then converted into a website using GitHub Pages. Please feel free to use the script for your own purposes and modify as needed! The script can be found [in this repository](repo_fetcher.py).
+
 # Table of Contents
 - [My projects](#my-projects)
 - [Projects I've done for Others](#projects-ive-done-for-others)
