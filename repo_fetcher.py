@@ -72,6 +72,9 @@ If you see any that interest you, feel free to reach out to me at [Ansley.Brown@
 
 ### Projects
 {org_repo_section}
+
+# Note on Private Repositories
+Please note that many repositories never go public due to various reasons (e.g., data privacy, intellectual property, etc.). If you are interested in seeing more of my work, please reach out to me directly, and I may be able to provide you with more information.
     """
 
     with open('README.md', 'w', encoding='utf-8') as readme_file:

@@ -6,8 +6,8 @@ If you see any that interest you, feel free to reach out to me at [Ansley.Brown@
 
 Back to [AJ's Website](https://sites.google.com/view/ansleyjbrown).
 
-> !NOTE 
-> This project list is automatically generated from a python script I created to scrape my GitHub repositories. Feel free to use it for yourself, as it is open source and available within this repository as well.
+> [!TIP] 
+> This project list is automatically generated from a python script I created to scrape my GitHub repositories. Feel free to use it for yourself, as it is open source and [available within this repository as well](repo_fetcher.py).
 
 # Table of Contents
 - [My projects](#my-projects)
@@ -87,4 +87,15 @@ Back to [AJ's Website](https://sites.google.com/view/ansleyjbrown).
 - **[.github](https://github.com/CSU-Agricultural-Water-Quality-Program/.github)**
   - Welcome to the Colorado State University Agricultural Water Quality Program GitHub!
 
-    
+# Note on Private Repositories
+Please note that many repositories never go public due to various reasons (e.g., data privacy, intellectual property, etc.). If you are interested in seeing more of my work, please reach out to me directly, and I may be able to provide you with more information.
+
+# Contact
+Ansley "A.J." Brown</br>
+Agricultural Data Scientist</br>
+Colorado State University</br>
+Ansley.Brown@colostate.edu
+
+---
+
+**Back to [AJ's Website](https://sites.google.com/view/ansleyjbrown)**
