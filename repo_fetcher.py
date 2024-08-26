@@ -51,7 +51,8 @@ def create_readme():
     org_repo_section = get_organization_repos("CSU-Agricultural-Water-Quality-Program")
 
     readme_content = f"""
-# Introduction
+# AJ's Data Tools
+## Introduction
 A website created to easily direct users to my data tools and projects. To view a project, click on the project title, and it will direct you to the project's GitHub repository.
 
 If you see any that interest you, feel free to reach out to me at [Ansley.Brown@colostate.edu](mailto:Ansley.Brown@colostate.edu) or [ansleybrown1337@gmail.com](mailto:ansleybrown1337@gmail.com).
