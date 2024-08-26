@@ -1,19 +1,11 @@
 
 # Introduction
-A website created to easily direct visitors to my data tools and projects. To view a project, click on the project title, and it will direct you to the project's GitHub repository. 
-
+A website created to easily direct users to my data tools and projects. To view a project, click on the project title, and it will direct you to the project's GitHub repository.
 If you see any that interest you, feel free to reach out to me at [Ansley.Brown@colostate.edu](mailto:Ansley.Brown@colostate.edu) or [ansleybrown1337@gmail.com](mailto:ansleybrown1337@gmail.com).
-
-Back to [AJ's Website](https://sites.google.com/view/ansleyjbrown).
-
-> [!TIP] 
-> This project list is automatically generated from a python script I created to scrape my GitHub repositories. Feel free to use it for yourself, as it is open source and [available within this repository as well](repo_fetcher.py).
-
 # Table of Contents
 - [My projects](#my-projects)
 - [Projects I've done for Others](#projects-ive-done-for-others)
   - [CSU Agriculture Water Quality Program](#csu-agriculture-water-quality-program)
-
 # My projects
 - **[air-quality-kit](https://github.com/ansleybrown1337/air-quality-kit)**
   - Source for the Particle Air Quality Monitoring Kit
@@ -26,7 +18,7 @@ Back to [AJ's Website](https://sites.google.com/view/ansleyjbrown).
 - **[AWQP-Water-Analysis-Report](https://github.com/ansleybrown1337/AWQP-Water-Analysis-Report)**
   - Python tool to generate standard water quality reports with preliminary analytics and tools
 - **[bayes-sampler-comparison](https://github.com/ansleybrown1337/bayes-sampler-comparison)**
-  - A comparison investigation of water sampling methods as tested by the CSU AWQP on the Kerbel field in 2023. 
+  - A comparison investigation of water sampling methods using Bayesian inference modeling as part of a 2023 study by the CSU Agricultural Water Quality Program
 - **[bayes-tss-uncertainty](https://github.com/ansleybrown1337/bayes-tss-uncertainty)**
   - This project aims to apply Bayesian Inference and Markov Chain Monte Carlo (MCMC) methods to quantify uncertainty in Total Suspended Solids (TSS) measurements.
 - **[Corn-yield-salinity-response](https://github.com/ansleybrown1337/Corn-yield-salinity-response)**
@@ -70,13 +62,10 @@ Back to [AJ's Website](https://sites.google.com/view/ansleyjbrown).
 - **[WR514-GIS-Exercises](https://github.com/ansleybrown1337/WR514-GIS-Exercises)**
   - Using GeoPandas to aggregate population data
 
-
 # Projects I've done for Others
-
 ## CSU Agriculture Water Quality Program
 - [AWQP GitHub Page](https://github.com/CSU-Agricultural-Water-Quality-Program)
 - [AWQP Website](https://waterquality.colostate.edu/)
-
 ### Projects
 - **[awqp-mountain-meadow-spectral-analysis](https://github.com/CSU-Agricultural-Water-Quality-Program/awqp-mountain-meadow-spectral-analysis)**
   - This project focuses on the development of nitrogen fertilizer management zones using drone-derived spectral data in mountain meadow hay fields found in Colorado, USA. 
@@ -89,13 +78,4 @@ Back to [AJ's Website](https://sites.google.com/view/ansleyjbrown).
 
 # Note on Private Repositories
 Please note that many repositories never go public due to various reasons (e.g., data privacy, intellectual property, etc.). If you are interested in seeing more of my work, please reach out to me directly, and I may be able to provide you with more information.
-
-# Contact
-Ansley "A.J." Brown</br>
-Agricultural Data Scientist</br>
-Colorado State University</br>
-Ansley.Brown@colostate.edu
-
----
-
-**Back to [AJ's Website](https://sites.google.com/view/ansleyjbrown)**
+    
