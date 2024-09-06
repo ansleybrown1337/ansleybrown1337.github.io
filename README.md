@@ -43,6 +43,8 @@ If you see any that interest you, feel free to reach out to me at [Ansley.Brown@
   - R script designed to take bucket fill time readings and flume measurements in surface irrigation systemsto calculate water inflow/outflow quantities in volume and depth
 - **[Letterboxd_Caz](https://github.com/ansleybrown1337/Letterboxd_Caz)**
   - Letterboxd stats for logged moview
+- **[lysimeter-analysis](https://github.com/ansleybrown1337/lysimeter-analysis)**
+  - Python package that processes and analyzes weighing lysimeter data for quantifying crop water use (i.e., evapotranspiration).
 - **[nimble-csu-2023](https://github.com/ansleybrown1337/nimble-csu-2023)**
   - Materials for the NIMBLE short course at the enviBayes workshop at Colorado State University, September 18, 2023
 - **[optimal-path-using-dijkstras-algorithm](https://github.com/ansleybrown1337/optimal-path-using-dijkstras-algorithm)**
