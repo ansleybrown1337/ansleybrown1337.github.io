@@ -18,7 +18,7 @@ If you see any that interest you, feel free to reach out to me at [Ansley.Brown@
 
 ## Online Applications
 - **[lysimeter-analysis](https://csu-lysimeter-analysis.streamlit.app/)**
-- **[Weather Forecasting Tool]**(https://rushmgmt.streamlit.app/)**
+- **[Weather Forecasting Tool](https://rushmgmt.streamlit.app/)**
   
 ## My projects
 - **[air-quality-kit](https://github.com/ansleybrown1337/air-quality-kit)**
