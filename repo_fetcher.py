@@ -60,32 +60,40 @@ A website created to easily direct users to my data tools and projects. To view 
 If you see any that interest you, feel free to reach out to me at [Ansley.Brown@colostate.edu](mailto:Ansley.Brown@colostate.edu) or [ansleybrown1337@gmail.com](mailto:ansleybrown1337@gmail.com).
 
 > [!TIP]
-> The contents of this website are automatically generated from a python script I created. The script uses the GitHub API to pull all of my repositories and then formats them into a markdown file. The markdown file is then converted into a website using GitHub Pages. Please feel free to use the script for your own purposes and modify as needed! The script can be found [in this repository](repo_fetcher.py).
+> Even the contents of this site are one of my data tools! The script uses the GitHub API to pull all of my repositories and then formats them into a markdown file. The markdown file is then converted into a website using GitHub Pages. Please feel free to use the script for your own purposes and modify as needed! The script can be found [in this repository](repo_fetcher.py).
 
-# Table of Contents
-- [My projects](#my-projects)
-- [Projects I've done for Others](#projects-ive-done-for-others)
+## Table of Contents
+- [Online applications](#online-applications)
+- [All of my projects](#my-projects)
+- [Projects I've done for others](#projects-ive-done-for-others)
   - [CSU Agriculture Water Quality Program](#csu-agriculture-water-quality-program)
 
-# My projects
+## Online Applications
+- **[lysimeter-analysis](https://csu-lysimeter-analysis.streamlit.app/)**
+- **[Weather Forecasting Tool]**(https://rushmgmt.streamlit.app/)**
+  
+## My projects
 {user_repo_section}
 
-# Projects I've done for Others
+## Projects I've done for Others
 
-## CSU Agriculture Water Quality Program
+### CSU Agriculture Water Quality Program
 - [AWQP GitHub Page](https://github.com/CSU-Agricultural-Water-Quality-Program)
 - [AWQP Website](https://waterquality.colostate.edu/)
 
-### Projects
+#### Projects
 {org_repo_section}
 
-# Note on Private Repositories
-Please note that many repositories never go public due to various reasons (e.g., data privacy, intellectual property, etc.). If you are interested in seeing more of my work, please reach out to me directly, and I may be able to provide you with more information.
-    
+## Note on Private Repositories
+Please note that many repositories never go public due to various reasons (e.g., data privacy, intellectual property, etc.). If you are interested in seeing more of my work, please reach out to me directly, and I may be able to provide you with more information.<br/>
+
 **[Back to AJ's Website](https://sites.google.com/view/ansleyjbrown)**
     """
 
     with open('README.md', 'w', encoding='utf-8') as readme_file:
         readme_file.write(readme_content)
 
-create_readme()
+# run create_readme() if name is main
+if __name__ == "__main__":
+    create_readme()
+    print("README.md created successfully!")

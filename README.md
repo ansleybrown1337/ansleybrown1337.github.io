@@ -1,16 +1,26 @@
 
 # AJ's Data Tools
 **[Back to AJ's Website](https://sites.google.com/view/ansleyjbrown)**
+
 ## Introduction
 A website created to easily direct users to my data tools and projects. To view a project, click on the project title, and it will direct you to the project's GitHub repository.
+
 If you see any that interest you, feel free to reach out to me at [Ansley.Brown@colostate.edu](mailto:Ansley.Brown@colostate.edu) or [ansleybrown1337@gmail.com](mailto:ansleybrown1337@gmail.com).
+
 > [!TIP]
-> The contents of this website are automatically generated from a python script I created. The script uses the GitHub API to pull all of my repositories and then formats them into a markdown file. The markdown file is then converted into a website using GitHub Pages. Please feel free to use the script for your own purposes and modify as needed! The script can be found [in this repository](repo_fetcher.py).
-# Table of Contents
-- [My projects](#my-projects)
-- [Projects I've done for Others](#projects-ive-done-for-others)
+> Even the contents of this site are one of my data tools! The script uses the GitHub API to pull all of my repositories and then formats them into a markdown file. The markdown file is then converted into a website using GitHub Pages. Please feel free to use the script for your own purposes and modify as needed! The script can be found [in this repository](repo_fetcher.py).
+
+## Table of Contents
+- [Online applications](#online-applications)
+- [All of my projects](#my-projects)
+- [Projects I've done for others](#projects-ive-done-for-others)
   - [CSU Agriculture Water Quality Program](#csu-agriculture-water-quality-program)
-# My projects
+
+## Online Applications
+- **[lysimeter-analysis](https://csu-lysimeter-analysis.streamlit.app/)**
+- **[Weather Forecasting Tool]**(https://rushmgmt.streamlit.app/)**
+  
+## My projects
 - **[air-quality-kit](https://github.com/ansleybrown1337/air-quality-kit)**
   - Source for the Particle Air Quality Monitoring Kit
 - **[ALS-Data-Cleaning-Tool](https://github.com/ansleybrown1337/ALS-Data-Cleaning-Tool)**
@@ -33,6 +43,8 @@ If you see any that interest you, feel free to reach out to me at [Ansley.Brown@
   - A collection of material for performing electromagnetic induction (EMI) surveys using an Geonics, Ltd. EM38 device, plus theory. Additionally, it contains the necessary software and training for running ESAP.
 - **[ExtractChem-Wrapper](https://github.com/ansleybrown1337/ExtractChem-Wrapper)**
   - Python script for monte carlo analysis using the ExtractChem geochemical model.
+- **[grocerygetter](https://github.com/ansleybrown1337/grocerygetter)**
+  - Python tool with custom recipe book that creates grocery list based on recipes selected, then uses Kroger API calls to add items to cart.
 - **[Hydrus-1D-Python-Wrapper](https://github.com/ansleybrown1337/Hydrus-1D-Python-Wrapper)**
   - This repository is dedicated to the ongoing project of using python to run Monte Carlo analysis on the soil physical and chemical model, Hydrus 1D
 - **[imodels](https://github.com/ansleybrown1337/imodels)**
@@ -68,13 +80,14 @@ If you see any that interest you, feel free to reach out to me at [Ansley.Brown@
 - **[WR514-GIS-Exercises](https://github.com/ansleybrown1337/WR514-GIS-Exercises)**
   - Using GeoPandas to aggregate population data
 
-# Projects I've done for Others
-## CSU Agriculture Water Quality Program
+
+## Projects I've done for Others
+
+### CSU Agriculture Water Quality Program
 - [AWQP GitHub Page](https://github.com/CSU-Agricultural-Water-Quality-Program)
 - [AWQP Website](https://waterquality.colostate.edu/)
-### Projects
-- **[awqp-mountain-meadow-spectral-analysis](https://github.com/CSU-Agricultural-Water-Quality-Program/awqp-mountain-meadow-spectral-analysis)**
-  - This project focuses on the development of nitrogen fertilizer management zones using drone-derived spectral data in mountain meadow hay fields found in Colorado, USA. 
+
+#### Projects
 - **[ALS-Data-Cleaning-Tool](https://github.com/CSU-Agricultural-Water-Quality-Program/ALS-Data-Cleaning-Tool)**
   - A coding tool developed in R to take water analysis results exported from the ALS WEBTRIEVE™ data portal. Exported data are cleaned, merged, and exported into archiving (e.g., CSV) or visual (e.g., HTML) formats.
 - **[low-cost-iot-water-sampler](https://github.com/CSU-Agricultural-Water-Quality-Program/low-cost-iot-water-sampler)**
@@ -84,7 +97,9 @@ If you see any that interest you, feel free to reach out to me at [Ansley.Brown@
 - **[.github](https://github.com/CSU-Agricultural-Water-Quality-Program/.github)**
   - Welcome to the Colorado State University Agricultural Water Quality Program GitHub!
 
-# Note on Private Repositories
-Please note that many repositories never go public due to various reasons (e.g., data privacy, intellectual property, etc.). If you are interested in seeing more of my work, please reach out to me directly, and I may be able to provide you with more information.
+
+## Note on Private Repositories
+Please note that many repositories never go public due to various reasons (e.g., data privacy, intellectual property, etc.). If you are interested in seeing more of my work, please reach out to me directly, and I may be able to provide you with more information.<br/>
+
 **[Back to AJ's Website](https://sites.google.com/view/ansleyjbrown)**
     
