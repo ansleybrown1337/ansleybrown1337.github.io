@@ -55,8 +55,12 @@ If you see any that interest you, feel free to reach out to me at [Ansley.Brown@
   - R script designed to take bucket fill time readings and flume measurements in surface irrigation systemsto calculate water inflow/outflow quantities in volume and depth
 - **[Letterboxd_Caz](https://github.com/ansleybrown1337/Letterboxd_Caz)**
   - Letterboxd stats for logged moview
+- **[load-calc-experiment](https://github.com/ansleybrown1337/load-calc-experiment)**
+  - R code used to experiment with optimal ways to calculate loads for water quality parameters using edge-of-field runoff water quality data.
 - **[lysimeter-analysis](https://github.com/ansleybrown1337/lysimeter-analysis)**
   - Python package that processes and analyzes weighing lysimeter data for quantifying crop water use (i.e., evapotranspiration).
+- **[multicolinearity-for-N-leaching-example](https://github.com/ansleybrown1337/multicolinearity-for-N-leaching-example)**
+  - Code to simulate multicolinearity issues for deep N leaching regression.
 - **[nimble-csu-2023](https://github.com/ansleybrown1337/nimble-csu-2023)**
   - Materials for the NIMBLE short course at the enviBayes workshop at Colorado State University, September 18, 2023
 - **[optimal-path-using-dijkstras-algorithm](https://github.com/ansleybrown1337/optimal-path-using-dijkstras-algorithm)**
@@ -69,16 +73,14 @@ If you see any that interest you, feel free to reach out to me at [Ansley.Brown@
   - My first attempt at creating custom QR codes using qrcode in python.
 - **[runoff-mcmc](https://github.com/ansleybrown1337/runoff-mcmc)**
   - My first use of Markov chain Monte Carlo techniques in an attempt to model runoff water quality.
+- **[sms-api-scrapers](https://github.com/ansleybrown1337/sms-api-scrapers)**
+  - Python tools developed to obtain soil moisture sensor data via API protocols
 - **[spectral-prediciton-of-salinity-glmulti](https://github.com/ansleybrown1337/spectral-prediciton-of-salinity-glmulti)**
   - R script that takes spectral data coupled with ground truth salinity data (ECe), to create a glm model via the glmulti package that will optimize predictor selection. 
 - **[ubidots-particle](https://github.com/ansleybrown1337/ubidots-particle)**
   - Library for uploading Particle devices to Ubidots
 - **[Ubidots-Python-API-Client-Test](https://github.com/ansleybrown1337/Ubidots-Python-API-Client-Test)**
   - First take at using python to access Ubidot data. The fiirst method utilizes the Ubidots python module. The second uses HTTP protocols.
-- **[water-data-converter-in-r-and-python](https://github.com/ansleybrown1337/water-data-converter-in-r-and-python)**
-  - Tool created to convert old and new water quality data formats back and forth both using R coding language and Python for educational purposes
-- **[WR514-GIS-Exercises](https://github.com/ansleybrown1337/WR514-GIS-Exercises)**
-  - Using GeoPandas to aggregate population data
 
 
 ## Projects I've done for Others
@@ -96,6 +98,16 @@ If you see any that interest you, feel free to reach out to me at [Ansley.Brown@
   - AWQP project to compare and contrast runoff water quality of irrigation runoff water passing through a vegetative filter strip pre and post establishment of pollinator species in the strip.
 - **[.github](https://github.com/CSU-Agricultural-Water-Quality-Program/.github)**
   - Welcome to the Colorado State University Agricultural Water Quality Program GitHub!
+- **[awqp-loggers](https://github.com/CSU-Agricultural-Water-Quality-Program/awqp-loggers)**
+  - No description
+- **[AWQP-LCS-Etape-Calibration](https://github.com/CSU-Agricultural-Water-Quality-Program/AWQP-LCS-Etape-Calibration)**
+  - Etape Calibration for the AWQP Low Cost Samplers
+- **[AWQP_LCS_pump_calibration](https://github.com/CSU-Agricultural-Water-Quality-Program/AWQP_LCS_pump_calibration)**
+  - LSC pump calibration code 
+- **[etape-calibration-investigation](https://github.com/CSU-Agricultural-Water-Quality-Program/etape-calibration-investigation)**
+  - Statistical investigation of the calibration of eTapes used by the CSU AWQP.
+- **[runoff-temp-project](https://github.com/CSU-Agricultural-Water-Quality-Program/runoff-temp-project)**
+  - CSU AWQP Project by Abby Coney to Investigate the impacts of tillage practices on runoff water temperature.
 
 
 ## Note on Private Repositories
