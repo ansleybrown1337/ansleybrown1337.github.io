@@ -1,0 +1,359 @@
+:root {
+  --bg: #f3efe5;
+  --surface: rgba(255, 252, 245, 0.88);
+  --surface-strong: #fffaf0;
+  --text: #1f2a1f;
+  --muted: #59665a;
+  --line: rgba(31, 42, 31, 0.12);
+  --accent: #2f6f57;
+  --accent-strong: #1e4f3d;
+  --accent-soft: #d9eadf;
+  --sun: #d2a24c;
+  --shadow: 0 18px 45px rgba(42, 52, 38, 0.12);
+  --radius: 24px;
+  --radius-sm: 16px;
+  --max-width: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  background:
+    radial-gradient(circle at top left, rgba(210, 162, 76, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(47, 111, 87, 0.18), transparent 24%),
+    linear-gradient(180deg, #f7f2e8 0%, #efe7d8 100%);
+}
+
+a {
+  color: inherit;
+}
+
+.site-shell {
+  min-height: 100vh;
+}
+
+.hero {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 28px 20px 20px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 36px;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.topbar a {
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 250, 240, 0.6);
+}
+
+.hero__content {
+  padding: 44px;
+  border: 1px solid rgba(31, 42, 31, 0.08);
+  border-radius: calc(var(--radius) + 8px);
+  background:
+    linear-gradient(135deg, rgba(255, 250, 240, 0.95), rgba(236, 244, 238, 0.92)),
+    var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  color: var(--accent-strong);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.05;
+}
+
+h1 {
+  max-width: 10ch;
+  font-size: clamp(3rem, 7vw, 5.6rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+  font-size: 1.45rem;
+}
+
+.hero__tagline,
+.hero__about,
+.section__header p,
+.repo-group__header p,
+.card p,
+.stat-card p,
+.meta,
+.note-card p {
+  color: var(--muted);
+}
+
+.hero__tagline {
+  max-width: 42rem;
+  margin: 18px 0 10px;
+  font-size: 1.2rem;
+}
+
+.hero__about {
+  max-width: 44rem;
+  margin: 0;
+  font-size: 1.04rem;
+  line-height: 1.65;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  transition: transform 0.18s ease, background-color 0.18s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button--primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.button--secondary {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 10px 20px 80px;
+}
+
+.section {
+  margin-top: 34px;
+  padding: 34px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(31, 42, 31, 0.08);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.section--featured {
+  background:
+    linear-gradient(135deg, rgba(47, 111, 87, 0.08), rgba(210, 162, 76, 0.12)),
+    var(--surface);
+}
+
+.section__header {
+  margin-bottom: 24px;
+}
+
+.section__header p {
+  max-width: 52rem;
+  margin: 10px 0 0;
+  line-height: 1.65;
+}
+
+.stats-row,
+.card-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.stats-row {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  margin-bottom: 30px;
+}
+
+.card-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card-grid--featured {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card,
+.stat-card,
+.note-card {
+  border-radius: var(--radius-sm);
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  min-height: 100%;
+}
+
+.card__icon {
+  width: 52px;
+  height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+.card__title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.card__title {
+  text-decoration: none;
+}
+
+.card__title:hover {
+  text-decoration: underline;
+}
+
+.pill-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  background: rgba(47, 111, 87, 0.08);
+  color: var(--accent-strong);
+}
+
+.pill--fork {
+  background: rgba(210, 162, 76, 0.16);
+  color: #6a4b14;
+}
+
+.meta {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.card p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.card__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.card__actions a {
+  text-decoration: none;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.card__actions a:hover {
+  text-decoration: underline;
+}
+
+.stat-card {
+  padding: 18px;
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 2rem;
+}
+
+.stat-card p {
+  margin: 8px 0 0;
+}
+
+.repo-sections,
+#org-sections {
+  display: grid;
+  gap: 28px;
+}
+
+.repo-group__header,
+.org-block__header {
+  margin-bottom: 18px;
+}
+
+.org-block__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.org-block__actions a {
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.note-card {
+  padding: 24px;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding: 18px 14px 8px;
+  }
+
+  .content {
+    padding: 8px 14px 60px;
+  }
+
+  .hero__content,
+  .section {
+    padding: 24px;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJ's Data Tools and Projects</title>
+    <meta
+      name="description"
+      content="Applied data tools for agriculture, water quality, and decision support."
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="hero">
+        <nav class="topbar">
+          <a class="topbar__home" href="https://sites.google.com/view/ansleyjbrown">Main Site</a>
+          <a class="topbar__contact" href="mailto:ansleybrown1337@gmail.com">Contact</a>
+        </nav>
+
+        <div class="hero__content">
+          <p class="eyebrow">Portfolio</p>
+          <h1 id="site-title">AJ's Data Tools and Projects</h1>
+          <p class="hero__tagline" id="site-tagline"></p>
+          <p class="hero__about" id="site-about"></p>
+
+          <div class="hero__actions">
+            <a class="button button--primary" href="#featured">See Featured Tools</a>
+            <a class="button button--secondary" href="#projects">Browse Projects</a>
+          </div>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="section section--featured" id="featured">
+          <div class="section__header">
+            <p class="eyebrow">Top 3</p>
+            <h2>Featured Data Tools</h2>
+            <p>Three projects that best represent the kind of work this portfolio is built around.</p>
+          </div>
+          <div class="card-grid card-grid--featured" id="featured-grid"></div>
+        </section>
+
+        <section class="section" id="apps">
+          <div class="section__header">
+            <p class="eyebrow">Live</p>
+            <h2>Online Applications</h2>
+            <p>Direct links to interactive tools that are already deployed and ready to use.</p>
+          </div>
+          <div class="card-grid" id="apps-grid"></div>
+        </section>
+
+        <section class="section" id="projects">
+          <div class="section__header">
+            <p class="eyebrow">Automated Catalog</p>
+            <h2>Project Library</h2>
+            <p>
+              This section is generated from GitHub so the portfolio stays current while still
+              separating original work from forks.
+            </p>
+          </div>
+
+          <div class="stats-row" id="stats-row"></div>
+
+          <div class="repo-sections">
+            <section class="repo-group">
+              <div class="repo-group__header">
+                <h3>Original Repositories</h3>
+                <p>Projects created and maintained under your account.</p>
+              </div>
+              <div class="card-grid" id="created-grid"></div>
+            </section>
+
+            <section class="repo-group">
+              <div class="repo-group__header">
+                <h3>Forked Repositories</h3>
+                <p>Useful derivatives, contributions, or references kept separate from original work.</p>
+              </div>
+              <div class="card-grid" id="forked-grid"></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="section" id="organizations">
+          <div class="section__header">
+            <p class="eyebrow">Collaborations</p>
+            <h2>Projects for Others</h2>
+          </div>
+          <div id="org-sections"></div>
+        </section>
+
+        <section class="section section--note">
+          <div class="note-card">
+            <h2>Private Repositories</h2>
+            <p id="private-repos-note"></p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="assets/generated/site-data.js"></script>
+    <script src="assets/site.js"></script>
+  </body>
+</html>
