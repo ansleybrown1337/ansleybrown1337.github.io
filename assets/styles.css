@@ -195,6 +195,33 @@ h3 {
   gap: 18px;
 }
 
+.search-bar {
+  margin-bottom: 24px;
+}
+
+.search-bar__label {
+  display: block;
+  margin-bottom: 10px;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  color: var(--accent-strong);
+}
+
+.search-bar__input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--text);
+  font-size: 1rem;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.search-bar__input:focus {
+  outline: 2px solid rgba(47, 111, 87, 0.22);
+  border-color: var(--accent);
+}
+
 .stats-row {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   margin-bottom: 30px;
@@ -224,6 +251,10 @@ h3 {
   min-height: 100%;
 }
 
+.card.is-hidden {
+  display: none;
+}
+
 .card__icon {
   width: 52px;
   height: 52px;
@@ -233,6 +264,14 @@ h3 {
   border-radius: 16px;
   background: var(--accent-soft);
   color: var(--accent-strong);
+}
+
+.card__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--line);
 }
 
 .card__title-row {

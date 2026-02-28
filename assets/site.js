@@ -45,6 +45,15 @@ function statCard(value, label) {
 function createCard(item, options = {}) {
   const card = document.createElement("article");
   card.className = "card";
+  card.dataset.search = [
+    item.name,
+    item.description,
+    item.language || "",
+    options.subtitle || "",
+    options.headline || item.headline || "",
+  ]
+    .join(" ")
+    .toLowerCase();
 
   const pills = [];
   if (options.showLanguage && item.language) {
@@ -68,8 +77,12 @@ function createCard(item, options = {}) {
       : "";
 
   const headline = options.headline ? `<p>${options.headline}</p>` : "";
+  const image = item.image
+    ? `<img class="card__image" src="${item.image}" alt="${item.name} preview" loading="lazy" />`
+    : "";
 
   card.innerHTML = `
+    ${image}
     <div class="card__icon">${ICONS[item.icon] || ICONS.folder}</div>
     <div class="card__title-row">
       <a class="card__title" href="${item.url}" target="_blank" rel="noreferrer">
@@ -133,6 +146,20 @@ function renderStats(data) {
   stats.appendChild(statCard(orgCount, "Collaboration repos"));
 }
 
+function setupSearch() {
+  const input = document.getElementById("project-search");
+  const cards = Array.from(document.querySelectorAll("#projects .card, #organizations .card"));
+
+  input.addEventListener("input", () => {
+    const query = input.value.trim().toLowerCase();
+
+    cards.forEach((card) => {
+      const matches = !query || card.dataset.search.includes(query);
+      card.classList.toggle("is-hidden", !matches);
+    });
+  });
+}
+
 function init() {
   setText("site-title", SITE_DATA.profile.title);
   setText("site-tagline", SITE_DATA.profile.tagline);
@@ -142,6 +169,7 @@ function init() {
   renderCards("featured-grid", SITE_DATA.featured, {
     showLanguage: true,
     subtitle: "Featured project",
+    headline: "",
   });
   renderCards("apps-grid", SITE_DATA.online_apps, {
     extraPill: "Live app",
@@ -151,6 +179,7 @@ function init() {
   renderCards("forked-grid", SITE_DATA.personal.forked, { showLanguage: true });
   renderOrganizations(SITE_DATA.organizations);
   renderStats(SITE_DATA);
+  setupSearch();
 }
 
 init();

@@ -55,16 +55,22 @@ ONLINE_APPS = [
 
 FEATURED_PROJECTS = [
     {
-        "repo": "lysimeter-analysis",
-        "headline": "Quantifies crop water use from weighing lysimeter observations.",
+        "repo": "bayes-sampler-comparison",
+        "source": "personal",
+        "headline": "Compares water sampling methods with Bayesian modeling for applied field research.",
+        "image": "assets/images/featured/bayes-sampler-comparison.png",
     },
     {
-        "repo": "AWQP-Water-Analysis-Report",
-        "headline": "Builds standardized water quality reports with automated analytics.",
+        "repo": "ALS-Data-Cleaning-Tool",
+        "source": "CSU-Agricultural-Water-Quality-Program",
+        "headline": "Cleans and standardizes ALS water analysis exports for archiving and reporting.",
+        "image": "assets/images/featured/als-data-cleaning-tool.png",
     },
     {
-        "repo": "bayes-tss-uncertainty",
-        "headline": "Applies Bayesian inference to uncertainty in suspended solids data.",
+        "repo": "low-cost-iot-water-sampler",
+        "source": "CSU-Agricultural-Water-Quality-Program",
+        "headline": "Showcases low-cost IoT sampling hardware for scalable water quality monitoring.",
+        "image": "assets/images/featured/low-cost-iot-water-sampler.png",
     },
 ]
 
@@ -158,11 +164,12 @@ def summarize_repo(repo: dict) -> dict:
     }
 
 
-def build_featured_section(repos: list[dict]) -> list[dict]:
-    repo_lookup = {repo["name"]: repo for repo in repos}
+def build_featured_section(repo_sources: dict[str, list[dict]]) -> list[dict]:
     featured_cards: list[dict] = []
 
     for item in FEATURED_PROJECTS:
+        source_name = item.get("source", "personal")
+        repo_lookup = {repo["name"]: repo for repo in repo_sources.get(source_name, [])}
         repo = repo_lookup.get(item["repo"])
         if not repo:
             continue
@@ -170,6 +177,7 @@ def build_featured_section(repos: list[dict]) -> list[dict]:
             {
                 **repo,
                 "headline": item["headline"],
+                "image": item.get("image", ""),
             }
         )
 
@@ -202,6 +210,15 @@ def build_org_sections() -> list[dict]:
         )
 
     return sections
+
+
+def build_repo_sources(personal_repos: list[dict], org_sections: list[dict]) -> dict[str, list[dict]]:
+    sources = {"personal": personal_repos}
+    for org in ORGANIZATIONS:
+        matching = next((section for section in org_sections if section["name"] == org["label"]), None)
+        if matching:
+            sources[org["name"]] = matching["repos"]
+    return sources
 
 
 def parse_readme_repo_block(lines: list[str]) -> list[dict]:
@@ -253,7 +270,20 @@ def build_offline_site_data() -> dict:
 
     personal_repos = parse_readme_repo_block(personal_lines)
     org_repos = parse_readme_repo_block(org_lines)
-    featured = build_featured_section(personal_repos)
+    org_sections = [
+        {
+            "name": ORGANIZATIONS[0]["label"],
+            "github_url": ORGANIZATIONS[0]["github_url"],
+            "website_url": ORGANIZATIONS[0]["website_url"],
+            "repos": sorted(org_repos, key=lambda repo: repo["name"].lower()),
+        }
+    ]
+    featured = build_featured_section(
+        {
+            "personal": personal_repos,
+            ORGANIZATIONS[0]["name"]: org_repos,
+        }
+    )
 
     return {
         "profile": PROFILE,
@@ -263,14 +293,7 @@ def build_offline_site_data() -> dict:
             "created": sorted(personal_repos, key=lambda repo: repo["name"].lower()),
             "forked": [],
         },
-        "organizations": [
-            {
-                "name": ORGANIZATIONS[0]["label"],
-                "github_url": ORGANIZATIONS[0]["github_url"],
-                "website_url": ORGANIZATIONS[0]["website_url"],
-                "repos": sorted(org_repos, key=lambda repo: repo["name"].lower()),
-            }
-        ],
+        "organizations": org_sections,
         "notes": {
             "private_repos": (
                 "Many repositories remain private because of data sensitivity, "
@@ -286,13 +309,14 @@ def build_offline_site_data() -> dict:
 def build_site_data() -> dict:
     personal_repos = fetch_all_repos("https://api.github.com/users/ansleybrown1337/repos")
     normalized_personal = [summarize_repo(repo) for repo in personal_repos]
+    org_sections = build_org_sections()
 
     return {
         "profile": PROFILE,
         "online_apps": ONLINE_APPS,
-        "featured": build_featured_section(normalized_personal),
+        "featured": build_featured_section(build_repo_sources(normalized_personal, org_sections)),
         "personal": build_personal_sections(normalized_personal),
-        "organizations": build_org_sections(),
+        "organizations": org_sections,
         "notes": {
             "private_repos": (
                 "Many repositories remain private because of data sensitivity, "
