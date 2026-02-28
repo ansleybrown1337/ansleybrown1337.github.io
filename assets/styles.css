@@ -41,6 +41,28 @@ a {
   min-height: 100vh;
 }
 
+.section-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px 8px;
+}
+
+.section-nav a {
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 250, 240, 0.86);
+  backdrop-filter: blur(10px);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
 .hero {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -266,6 +288,11 @@ h3 {
   color: var(--accent-strong);
 }
 
+.card__icon--accent svg {
+  width: 24px;
+  height: 24px;
+}
+
 .card__image {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -377,6 +404,10 @@ h3 {
 }
 
 @media (max-width: 720px) {
+  .section-nav {
+    padding: 0 14px 8px;
+  }
+
   .hero {
     padding: 18px 14px 8px;
   }

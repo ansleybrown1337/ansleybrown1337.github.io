@@ -76,9 +76,10 @@ function createCard(item, options = {}) {
       ? `<p class="meta">Updated ${formatDate(item.updated_at)}</p>`
       : "";
 
-  const headline = options.headline ? `<p>${options.headline}</p>` : "";
+  const headlineText = options.headline || item.headline || "";
+  const headline = headlineText ? `<p>${headlineText}</p>` : "";
   const image = item.image
-    ? `<img class="card__image" src="${item.image}" alt="${item.name} preview" loading="lazy" />`
+    ? `<img class="card__image" src="${item.image}" alt="${item.name} preview" loading="lazy" onerror="this.style.display='none'" />`
     : "";
 
   card.innerHTML = `
@@ -165,11 +166,15 @@ function init() {
   setText("site-tagline", SITE_DATA.profile.tagline);
   setText("site-about", SITE_DATA.profile.about);
   setText("private-repos-note", SITE_DATA.notes.private_repos);
+  setText(
+    "automation-note",
+    "The repo list on this page is generated automatically so the catalog stays current. If you want to build something similar, the Python generator and site source are available in this repository."
+  );
+  document.getElementById("automation-icon").innerHTML = ICONS.code;
 
   renderCards("featured-grid", SITE_DATA.featured, {
     showLanguage: true,
     subtitle: "Featured project",
-    headline: "",
   });
   renderCards("apps-grid", SITE_DATA.online_apps, {
     extraPill: "Live app",
