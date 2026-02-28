@@ -41,28 +41,6 @@ a {
   min-height: 100vh;
 }
 
-.section-nav {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 20px 8px;
-}
-
-.section-nav a {
-  text-decoration: none;
-  padding: 10px 14px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: rgba(255, 250, 240, 0.86);
-  backdrop-filter: blur(10px);
-  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
-}
-
 .hero {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -153,6 +131,30 @@ h3 {
   gap: 14px;
   flex-wrap: wrap;
   margin-top: 28px;
+}
+
+.hero__section-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.hero__section-links a {
+  text-decoration: none;
+  padding: 9px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.66);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  font-size: 0.92rem;
+  color: var(--accent-strong);
+  transition: transform 0.18s ease, background-color 0.18s ease;
+}
+
+.hero__section-links a:hover {
+  transform: translateY(-1px);
+  background: rgba(217, 234, 223, 0.9);
 }
 
 .button {
@@ -404,10 +406,6 @@ h3 {
 }
 
 @media (max-width: 720px) {
-  .section-nav {
-    padding: 0 14px 8px;
-  }
-
   .hero {
     padding: 18px 14px 8px;
   }
