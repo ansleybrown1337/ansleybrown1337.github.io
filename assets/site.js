@@ -48,7 +48,7 @@ function createCard(item, options = {}) {
   card.dataset.search = [
     item.name,
     item.description,
-    item.language || "",
+    item.category || "",
     options.subtitle || "",
     options.headline || item.headline || "",
   ]
@@ -56,8 +56,8 @@ function createCard(item, options = {}) {
     .toLowerCase();
 
   const pills = [];
-  if (options.showLanguage && item.language) {
-    pills.push(`<span class="pill">${item.language}</span>`);
+  if (options.showCategory && item.category) {
+    pills.push(`<span class="pill">${item.category}</span>`);
   }
   if (item.fork) {
     pills.push('<span class="pill pill--fork">Fork</span>');
@@ -128,7 +128,7 @@ function renderOrganizations(organizations) {
 
     const grid = document.createElement("div");
     grid.className = "card-grid";
-    org.repos.forEach((repo) => grid.appendChild(createCard(repo, { showLanguage: true })));
+    org.repos.forEach((repo) => grid.appendChild(createCard(repo, { showCategory: true })));
     section.appendChild(grid);
 
     root.appendChild(section);
@@ -173,15 +173,15 @@ function init() {
   document.getElementById("automation-icon").innerHTML = ICONS.code;
 
   renderCards("featured-grid", SITE_DATA.featured, {
-    showLanguage: true,
+    showCategory: true,
     subtitle: "Featured project",
   });
   renderCards("apps-grid", SITE_DATA.online_apps, {
     extraPill: "Live app",
     subtitle: "Interactive deployment",
   });
-  renderCards("created-grid", SITE_DATA.personal.created, { showLanguage: true });
-  renderCards("forked-grid", SITE_DATA.personal.forked, { showLanguage: true });
+  renderCards("created-grid", SITE_DATA.personal.created, { showCategory: true });
+  renderCards("forked-grid", SITE_DATA.personal.forked, { showCategory: true });
   renderOrganizations(SITE_DATA.organizations);
   renderStats(SITE_DATA);
   setupSearch();

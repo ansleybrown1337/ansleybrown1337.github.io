@@ -102,6 +102,82 @@ ICON_RULES = [
     ("r ", "code"),
 ]
 
+REPO_CATEGORIES = {
+    ".github": "Documentation/Template",
+    "air-quality-kit": "IoT Firmware",
+    "ALS-Data-Cleaning-Tool": "Report Generator",
+    "ansleybrown1337": "Documentation/Template",
+    "ansleybrown1337.github.io": "Web Tool",
+    "AWQP-LCS-Etape-Calibration": "Data Analysis",
+    "AWQP-Water-Analysis-Report": "Report Generator",
+    "AWQP_LCS_pump_calibration": "Data Analysis",
+    "awqp-loggers": "IoT Firmware",
+    "bayes-sampler-comparison": "Data Analysis",
+    "bayes-tss-uncertainty": "Data Analysis",
+    "Corn-yield-salinity-response": "Data Analysis",
+    "csuthesis": "Documentation/Template",
+    "EM38-and-ESAP-material": "Educational Material",
+    "etape-calibration-investigation": "Data Analysis",
+    "ExtractChem-Wrapper": "Data Analysis",
+    "grocerygetter": "API Integration",
+    "Hydrus-1D-Python-Wrapper": "Data Analysis",
+    "imodels": "Data Analysis",
+    "Intro-to-coding-in-R": "Educational Material",
+    "Irrigation-inflow-outflow-calculator": "Data Analysis",
+    "Letterboxd_Caz": "Data Analysis",
+    "load-calc-experiment": "Data Analysis",
+    "low-cost-iot-water-sampler": "IoT Firmware",
+    "lysimeter-analysis": "Data Analysis",
+    "multicolinearity-for-N-leaching-example": "Data Analysis",
+    "nimble-csu-2023": "Educational Material",
+    "optimal-path-using-dijkstras-algorithm": "Educational Material",
+    "Particle-Electron-Modbus-Master-for-Campbell-Sci-Datalogger": "IoT Firmware",
+    "pile-temp-sensor-comparison": "Data Analysis",
+    "pollinator-strip-runoff": "Data Analysis",
+    "QR-code-generator-example": "Educational Material",
+    "runoff-mcmc": "Data Analysis",
+    "runoff-temp-project": "Data Analysis",
+    "sms-api-scrapers": "API Integration",
+    "spectral-prediciton-of-salinity-glmulti": "Data Analysis",
+    "ubidots-particle": "IoT Firmware",
+    "Ubidots-Python-API-Client-Test": "API Integration",
+}
+
+CATEGORY_RULES = [
+    ("report", "Report Generator"),
+    ("html", "Report Generator"),
+    ("dashboard", "Report Generator"),
+    ("iot", "IoT Firmware"),
+    ("particle", "IoT Firmware"),
+    ("modbus", "IoT Firmware"),
+    ("logger", "IoT Firmware"),
+    ("sensor", "IoT Firmware"),
+    ("firmware", "IoT Firmware"),
+    ("api", "API Integration"),
+    ("scraper", "API Integration"),
+    ("ubidots", "API Integration"),
+    ("kroger", "API Integration"),
+    ("site", "Web Tool"),
+    ("website", "Web Tool"),
+    ("github page", "Web Tool"),
+    ("template", "Documentation/Template"),
+    ("config", "Documentation/Template"),
+    ("documentation", "Documentation/Template"),
+    ("course", "Educational Material"),
+    ("tutorial", "Educational Material"),
+    ("training", "Educational Material"),
+    ("workshop", "Educational Material"),
+    ("material", "Educational Material"),
+    ("example", "Educational Material"),
+    ("analysis", "Data Analysis"),
+    ("investigation", "Data Analysis"),
+    ("model", "Data Analysis"),
+    ("mcmc", "Data Analysis"),
+    ("bayesian", "Data Analysis"),
+    ("calibration", "Data Analysis"),
+    ("comparison", "Data Analysis"),
+]
+
 
 def fetch_all_repos(url: str) -> list[dict]:
     repos: list[dict] = []
@@ -149,18 +225,31 @@ def choose_icon(name: str, description: str | None, language: str | None, fork: 
     return "folder"
 
 
+def choose_category(name: str, description: str | None, language: str | None) -> str:
+    if name in REPO_CATEGORIES:
+        return REPO_CATEGORIES[name]
+
+    haystack = f"{name.lower()} {(description or '').lower()} {(language or '').lower()}"
+    for needle, category in CATEGORY_RULES:
+        if needle in haystack:
+            return category
+
+    return "Data Analysis"
+
+
 def summarize_repo(repo: dict) -> dict:
     description = repo.get("description") or "No description provided yet."
+    language = repo.get("language")
     return {
         "name": repo["name"],
         "url": repo["html_url"],
         "description": description,
         "fork": bool(repo["fork"]),
-        "language": repo.get("language") or "Unknown",
+        "category": choose_category(repo["name"], description, language),
         "homepage": repo.get("homepage") or "",
         "updated_at": repo["updated_at"],
         "stargazers_count": repo.get("stargazers_count", 0),
-        "icon": choose_icon(repo["name"], description, repo.get("language"), bool(repo["fork"])),
+        "icon": choose_icon(repo["name"], description, language, bool(repo["fork"])),
     }
 
 
@@ -245,7 +334,7 @@ def parse_readme_repo_block(lines: list[str]) -> list[dict]:
                 "url": url,
                 "description": description,
                 "fork": False,
-                "language": "Unknown",
+                "category": choose_category(name, description, None),
                 "homepage": "",
                 "updated_at": "",
                 "stargazers_count": 0,
