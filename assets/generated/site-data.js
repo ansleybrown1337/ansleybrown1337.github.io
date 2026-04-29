@@ -26,7 +26,7 @@ window.SITE_DATA = {
     },
     {
       "name": "Variety Trial Spatial Analysis Tool",
-      "url": "",
+      "url": "https://019dd6fb-2759-d182-4e7d-ab689c7039eb.share.connect.posit.cloud/",
       "repo_url": "https://github.com/ansleybrown1337/sally-jd-yield-analysis",
       "description": "Posit Connect live tool for crop variety trial data that fits LS means and BLUPs, returns full diagnostics, provides downloadable results, and includes interactive visualizations.",
       "icon": "leaf",

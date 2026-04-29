@@ -199,7 +199,7 @@ function init() {
     primaryActionLabel: "View Repo",
     secondaryActionLabel: "Open App",
     secondaryActionUrl: (item) => item.url,
-    imageLink: (item) => item.repo_url || item.url,
+    imageLink: (item) => item.url || item.repo_url,
   });
   renderCards("created-grid", SITE_DATA.personal.created, { showCategory: true });
   renderCards("forked-grid", SITE_DATA.personal.forked, { showCategory: true });
