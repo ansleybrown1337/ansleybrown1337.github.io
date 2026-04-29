@@ -11,14 +11,26 @@ window.SITE_DATA = {
     {
       "name": "Lysimeter Analysis",
       "url": "https://csu-lysimeter-analysis.streamlit.app/",
-      "description": "Interactive analysis workflow for weighing lysimeter data.",
-      "icon": "chart"
+      "repo_url": "https://github.com/ansleybrown1337/lysimeter-analysis",
+      "description": "Interactive analysis workflow for weighing lysimeter data with diagnostics, summaries, and downloadable results.",
+      "icon": "chart",
+      "image": "assets/images/featured/lysimetertool.png"
     },
     {
       "name": "Weather Forecasting Tool",
       "url": "https://rushmgmt.streamlit.app/",
-      "description": "Live forecasting interface for weather-driven planning.",
-      "icon": "cloud"
+      "repo_url": "https://github.com/ansleybrown1337/rushmgmt",
+      "description": "Live forecasting interface for weather-driven planning and day-to-day management decisions.",
+      "icon": "cloud",
+      "image": "assets/images/featured/rushmgmt.png"
+    },
+    {
+      "name": "Variety Trial Spatial Analysis Tool",
+      "url": "",
+      "repo_url": "https://github.com/ansleybrown1337/sally-jd-yield-analysis",
+      "description": "Posit Connect live tool for crop variety trial data that fits LS means and BLUPs, returns full diagnostics, provides downloadable results, and includes interactive visualizations.",
+      "icon": "leaf",
+      "image": "assets/images/featured/varietytool.png"
     }
   ],
   "featured": [

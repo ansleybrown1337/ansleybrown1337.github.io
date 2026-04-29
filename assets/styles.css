@@ -340,6 +340,10 @@ h3 {
   border: 1px solid var(--line);
 }
 
+.card__media {
+  display: block;
+}
+
 .card__title-row {
   display: flex;
   justify-content: space-between;

@@ -69,6 +69,16 @@ function createCard(item, options = {}) {
   const homepageLink = item.homepage
     ? `<a href="${item.homepage}" target="_blank" rel="noreferrer">Live Link</a>`
     : "";
+  const primaryUrl = item.url || item.repo_url || item.homepage || "";
+  const primaryActionLabel = options.primaryActionLabel || "View Repo";
+  const primaryAction = primaryUrl
+    ? `<a href="${primaryUrl}" target="_blank" rel="noreferrer">${primaryActionLabel}</a>`
+    : "";
+  const secondaryActionLabel = options.secondaryActionLabel || "Live Link";
+  const secondaryActionUrl = options.secondaryActionUrl ? options.secondaryActionUrl(item) : item.homepage;
+  const secondaryAction = secondaryActionUrl
+    ? `<a href="${secondaryActionUrl}" target="_blank" rel="noreferrer">${secondaryActionLabel}</a>`
+    : "";
 
   const subtitle = options.subtitle
     ? `<p class="meta">${options.subtitle}</p>`
@@ -78,15 +88,21 @@ function createCard(item, options = {}) {
 
   const headlineText = options.headline || item.headline || "";
   const headline = headlineText ? `<p>${headlineText}</p>` : "";
-  const image = item.image
+  const imageLink = options.imageLink ? options.imageLink(item) : item.image_link || item.repo_url || primaryUrl;
+  const imageTag = item.image
     ? `<img class="card__image" src="${item.image}" alt="${item.name} preview" loading="lazy" onerror="this.style.display='none'" />`
+    : "";
+  const image = item.image
+    ? imageLink
+      ? `<a class="card__media" href="${imageLink}" target="_blank" rel="noreferrer">${imageTag}</a>`
+      : imageTag
     : "";
 
   card.innerHTML = `
     ${image}
     <div class="card__icon">${ICONS[item.icon] || ICONS.folder}</div>
     <div class="card__title-row">
-      <a class="card__title" href="${item.url}" target="_blank" rel="noreferrer">
+      <a class="card__title" href="${primaryUrl}" target="_blank" rel="noreferrer">
         <h3>${item.name}</h3>
       </a>
     </div>
@@ -95,8 +111,8 @@ function createCard(item, options = {}) {
     ${headline}
     <p>${item.description}</p>
     <div class="card__actions">
-      <a href="${item.url}" target="_blank" rel="noreferrer">View Repo</a>
-      ${homepageLink}
+      ${primaryAction}
+      ${secondaryAction || homepageLink}
     </div>
   `;
 
@@ -175,10 +191,15 @@ function init() {
   renderCards("featured-grid", SITE_DATA.featured, {
     showCategory: true,
     subtitle: "Featured project",
+    imageLink: (item) => item.url,
   });
   renderCards("apps-grid", SITE_DATA.online_apps, {
     extraPill: "Live app",
     subtitle: "Interactive deployment",
+    primaryActionLabel: "View Repo",
+    secondaryActionLabel: "Open App",
+    secondaryActionUrl: (item) => item.url,
+    imageLink: (item) => item.repo_url || item.url,
   });
   renderCards("created-grid", SITE_DATA.personal.created, { showCategory: true });
   renderCards("forked-grid", SITE_DATA.personal.forked, { showCategory: true });
