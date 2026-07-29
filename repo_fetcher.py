@@ -40,6 +40,14 @@ PROFILE = {
 
 ONLINE_APPS = [
     {
+        "name": "Colorado Corn Nitrogen Planner",
+        "url": "https://csu-corn-n-fertility.streamlit.app/",
+        "repo_url": "https://github.com/ansleybrown1337/corn-fert-recommend",
+        "description": "CSU-based decision-support tool for calculating irrigated grain-corn fertilizer N recommendations, comparing fields, and exporting batch PDF reports.",
+        "icon": "leaf",
+        "image": "assets/images/featured/corn-nitrogen-planner.png",
+    },
+    {
         "name": "Lysimeter Analysis",
         "url": "https://csu-lysimeter-analysis.streamlit.app/",
         "repo_url": "https://github.com/ansleybrown1337/lysimeter-analysis",

@@ -17,6 +17,8 @@ If you see any that interest you, feel free to reach out to me at [Ansley.Brown@
   - [CSU Agriculture Water Quality Program](#csu-agriculture-water-quality-program)
 
 ## Online Applications
+- **[Colorado Corn Nitrogen Planner](https://csu-corn-n-fertility.streamlit.app/)**
+  - CSU-based decision-support tool for calculating irrigated grain-corn fertilizer N recommendations, comparing fields, and exporting batch PDF reports.
 - **[lysimeter-analysis](https://csu-lysimeter-analysis.streamlit.app/)**
 - **[Weather Forecasting Tool](https://rushmgmt.streamlit.app/)**
   
@@ -114,4 +116,3 @@ If you see any that interest you, feel free to reach out to me at [Ansley.Brown@
 Please note that many repositories never go public due to various reasons (e.g., data privacy, intellectual property, etc.). If you are interested in seeing more of my work, please reach out to me directly, and I may be able to provide you with more information.<br/>
 
 **[Back to AJ's Website](https://sites.google.com/view/ansleyjbrown)**
-    
